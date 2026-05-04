@@ -72,7 +72,14 @@ const router = createRouter({
             path: '/:catchAll(.*)',
             name: 'not-found',
             component: NotFoundView
-        }
+        },
+
+        {
+    path: '/admin/stats',
+    name: 'admin-stats',
+    component: () => import('@/views/admin/AdminStats.vue'),
+    meta: { requireAuth: true, role: 'admin' }
+},
     ]
 })
 

@@ -26,16 +26,35 @@ const isActiveLink = (routePath) => {
         <div class="absolute text-xl font-semibold text-sky-600">
             Administrador
         </div>
+
         <div class="flex flex-col gap-y-4 mt-12">
             <RouterLink :class="[isActiveLink('/admin/bookings') ? 'bg-gray-300 font-semibold' : 'hover:bg-gray-300',
                 'hover:rounded-xl px-4 py-2 rounded-xl']" to="/admin/bookings">Reservas</RouterLink>
+
             <RouterLink :class="[isActiveLink('/admin/spaces') ? 'bg-gray-300 font-semibold' : 'hover:bg-gray-300',
                 'hover:rounded-xl px-4 py-2 rounded-xl']" to="/admin/spaces">Espacios</RouterLink>
+
             <RouterLink :class="[isActiveLink('/admin/history') ? 'bg-gray-300 font-semibold' : 'hover:bg-gray-300',
                 'hover:rounded-xl px-4 py-2 rounded-xl']" to="/admin/history?page=1">Historial</RouterLink>
-                <RouterLink :class="[isActiveLink('/admin/register') ? 'bg-gray-300 font-semibold' : 'hover:bg-gray-300',
+
+            <RouterLink :class="[isActiveLink('/admin/register') ? 'bg-gray-300 font-semibold' : 'hover:bg-gray-300',
                 'hover:rounded-xl px-4 py-2 rounded-xl']" to="/admin/register">Registrar</RouterLink>
+
+            <!-- // ===== NUEVO: STATS ===== -->
+            <RouterLink 
+                :class="[
+                    isActiveLink('/admin/stats') 
+                        ? 'bg-gray-300 font-semibold' 
+                        : 'hover:bg-gray-300',
+                    'hover:rounded-xl px-4 py-2 rounded-xl flex items-center gap-x-2'
+                ]" 
+                to="/admin/stats"
+            >
+                <span>📊</span>
+                <span>Estadísticas</span>
+            </RouterLink>
         </div>
+
         <div class="p-4">
             <Button
                 :text="'Salir'"
