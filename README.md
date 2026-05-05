@@ -8,7 +8,7 @@ Construido con **Vue 3 + Vite + Tailwind CSS + PrimeVue**.
 
 - 🔗 Frontend (fork): https://github.com/Kyaajjs/proyectoDOS
 - 🔗 Backend: https://github.com/Kyaajjs/reservas-backend
-- 🌐 Sitio desplegado: (URL aquí)
+- 🌐 Sitio desplegado: https://proyectodos-production.up.railway.app
 
 ---
 
